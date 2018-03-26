@@ -28,6 +28,17 @@ Here is a series of screenshots displaying what you should be able to do in the 
 * [Example of what you should see after successfully clicking Update on the above screen](https://www.dropbox.com/s/fzzxt8nhfexe3zs/Screenshot%202018-03-26%2001.24.45.png?dl=0)
 * [Example of what you should see after successfully deleting a TODO list](https://www.dropbox.com/s/zjc0sn8bhfp85q6/Screenshot%202018-03-26%2001.26.34.png?dl=0)
 
+Note also that the following is the format for entering multiple ToDoList items when creating a list, since it is harder to see in the screenshot:
+
+        Description of item, priorityinteger
+        Second item description, priorityinteger
+
+e.g.
+
+        Complete 364 HW5, 2
+        Study for capstone exam, 3
+        Go to soccer practice, 1
+
 You'll notice that the way this app is built is not exactly an ideal "TODO list" application, of which you can find very many on the internet. There are a lot of unusual things about how the data is managed and how the views show up, in the way you are directed to do this.
 
 That is because the goal of completing these tasks is to practice these important skills -- not to complete a thorough application, this time. If you want to do more work on this that is more advanced *on your separate branch*, that is completely fine. But the requirements of the app that you should turn in are as stated. They are relatively simple *compared to* a lot of the complex applications you probably engage with and use in real life.
