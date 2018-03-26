@@ -1,16 +1,30 @@
 # SI 364 - W18 - HW5
 
-### DEADLINE: April 5, 2018 at 11:59 pm
+### DEADLINE: April 1, 2018 at 11:59 pm
 
 **You should read all of the below before beginning to ensure you set yourself up well and submit the assignment correctly.**
 
 ## Overview
 
-You've been provided a small amount of scaffolding code. On top of the provided code, you'll need to add a number of things to make this application work fully, each marked by `TODO 364` inside the `app.py` file.
+You've been provided a bunch of scaffolding code. On top of the provided code, you'll need to add a number of things to make this application work fully, each marked by `TODO 364` inside the `app.py` file.
+
+The things to add in this file are many fewer than your previous assignment -- this assignment is practicing a skill you've already practiced in a class exercise or two, with a new base set of code.
 
 Each `TODO` listed for you is intended to be a small-to-medium size task. In general, you can go through the file top to bottom to address each one, but we've included suggestions in the comments about any time it makes sense to work on a TODO that comes later in the file first.
 
-Your overall objective is to complete building an application to build TODO lists, with individual items on them.
+Your overall objective is to complete building an application to build TODO lists, with individual items on them. You should be able to update individual list *items'* priority values, and you should be able to delete any TODO list that is saved in the app.
+
+Examining the code and instructions will give you further specifics.
+
+Here is a series of screenshots displaying what you should be able to do in the completed application:
+
+* [Home page](https://www.dropbox.com/s/dum22xa4qf3j2iy/Screenshot%202018-03-26%2001.23.46.png?dl=0)
+* [An example of entering a new list](https://www.dropbox.com/s/84fqx5e2k455dj2/Screenshot%202018-03-26%2001.24.20.png?dl=0)
+* [Viewing the All ToDo Lists page](https://www.dropbox.com/s/l9cmyg40gs5ltlv/Screenshot%202018-03-26%2001.24.27.png?dl=0)
+* [View of one particular list](https://www.dropbox.com/s/72ea46h19fdh1xk/Screenshot%202018-03-26%2001.24.33.png?dl=0)
+* [Example of the view while updating a ToDoList item's priority](https://www.dropbox.com/s/sjy4m3a96iuyxaf/Screenshot%202018-03-26%2001.24.38.png?dl=0)
+* [Example of what you should see after successfully clicking Update on the above screen](https://www.dropbox.com/s/fzzxt8nhfexe3zs/Screenshot%202018-03-26%2001.24.45.png?dl=0)
+* [Example of what you should see after successfully deleting a TODO list](https://www.dropbox.com/s/zjc0sn8bhfp85q6/Screenshot%202018-03-26%2001.26.34.png?dl=0)
 
 You'll notice that the way this app is built is not exactly an ideal "TODO list" application, of which you can find very many on the internet. There are a lot of unusual things about how the data is managed and how the views show up, in the way you are directed to do this.
 
@@ -22,7 +36,7 @@ You will be:
 
 * Completing a CRUD (Create Read Update Delete) application, specifically focusing on the Update and Delete actions
 * Continuing to plan around database relationships, forms, view functions, helper functions, and integrating back-end code with templates
-* Practicing skills with git, useful for collaborating and dealing with others' Flask and other types of web applications
+* Practicing a skill with git, useful for collaborating and dealing with others' Flask and other types of web applications
 
 
 ## Instructions
