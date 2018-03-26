@@ -68,7 +68,7 @@ class UpdateButtonForm(FlaskForm):
 # TODO 364: Define a form for updating the priority of a todolist item
 #(HINT: What class activity you have done before is this similar to?)
 class UpdateInfoForm(FlaskForm):
-    newRating = StringField("What is the new priority of this item?", validators=[Required()])
+    newPriority = StringField("What is the new priority of this item?", validators=[Required()])
     submit = SubmitField('Update')
 
 # TODO 364: Define a DeleteButtonForm class for use to delete todo items
@@ -130,9 +130,10 @@ def all_lists():
 
 @app.route('/list/<ident>',methods=["GET","POST"])
 def one_list(ident):
+    form = UpdateButtonForm()
     lst = TodoList.query.filter_by(id=ident).first()
-    items = lst.items
-    return render_template('list_tpl.html',todolist=lst,items=items)
+    items = lst.items.all()
+    return render_template('list_tpl.html',todolist=lst,items=items,form=form)
 # TODO 364: Update the one_list view function and the list_tpl.html view file so that there is an Update button next to each todolist item, and the priority integer of that item can be updated. (This is also addressed in later TODOs.)
 
 
@@ -142,8 +143,17 @@ def update(item):
     pass
     # Replace with code
     # This code should use the form you created above for updating the specific item and manage the process of updating the item's priority.
-    # Once it is updated, it should redirect to the page showing links to ALL todolists.
+    # Once it is updated, it should redirect to the page showing all the links to todo lists.
     # HINT: What previous example is extremely similar?
+    form = UpdateInfoForm()
+    if form.validate_on_submit():
+        new_priority = form.newPriority.data
+        item_thing = TodoItem.query.filter_by(id=item).first()
+        item_thing.priority = new_priority
+        db.session.commit()
+        flash("Updated priority of item: {}".format(item_thing.description))
+        return redirect(url_for('all_lists'))
+    return render_template('update_item.html',item_id=item, form = form)
 
 # TODO 364: Fill in the update_item.html template to work properly with this update route. (HINT: Compare against example!)
 
