@@ -120,8 +120,9 @@ def index():
 
 @app.route('/all_lists',methods=["GET","POST"])
 def all_lists():
+    form = DeleteButtonForm()
     lsts = TodoList.query.all()
-    return render_template('all_lists.html',todo_lists=lsts) # should have a place for flashed messages
+    return render_template('all_lists.html',todo_lists=lsts, form=form)
 
 # TODO 364: Update the all_lists.html template and the all_lists view function such that there is a delete button available for each ToDoList saved.
 # When you click on the delete button for each list, that list should get deleted -- this is also addressed in a later TODO.
@@ -149,7 +150,12 @@ def update(item):
 # TODO 364: Complete route to delete a whole ToDoList
 @app.route('/delete/<lst>',methods=["GET","POST"])
 def delete(lst):
-    pass # Replace with code
+    l = TodoList.query.filter_by(id=lst).first() # Just like update!
+    db.session.delete(l)
+    db.session.commit()
+    flash("Successfully deleted {}".format(l.title))
+    return redirect(url_for('all_lists'))
+    #pass # Replace with code
     # This code should successfully delete the appropriate todolist
     # Should flash a message about what was deleted
     # And redirect the user to the page showing all the todo lists
