@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, session, redirect, url_for, flash
+from flask import Flask, render_template, session, redirect, url_for, flash, request
 from flask_script import Manager, Shell
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FloatField, TextAreaField
@@ -11,6 +11,8 @@ from flask_migrate import Migrate, MigrateCommand
 # Application configurations
 ############################
 app = Flask(__name__)
+app.debug = True
+app.use_reloader = True
 app.config['SECRET_KEY'] = 'hard to guess string from si364'
 ## TODO 364: Create a database in postgresql in the code line below, and fill in your app's database URI. It should be of the format: postgresql://localhost/YOUR_DATABASE_NAME
 
@@ -23,6 +25,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 ##################
 ### App setup ####
 ##################
+manager = Manager(app)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 manager.add_command('db', MigrateCommand)
@@ -105,17 +108,17 @@ def get_or_create_todolist(title, item_strings=[]):
 ##### Routes & view functions #####
 ###################################
 
-@app.route('/')
+@app.route('/', methods=["GET","POST"])
 def index():
     form = TodoListForm()
-    if form.validate_on_submit():
+    if request.method=="POST":
         title = form.name.data
         items_data = form.items.data
         new_list = get_or_create_todolist(title, items_data.split("\n"))
         return redirect(url_for('all_lists'))
     return render_template('index.html',form=form)
 
-@app.route('/all_lists')
+@app.route('/all_lists',methods=["GET","POST"])
 def all_lists():
     lsts = TodoList.query.all()
     return render_template('all_lists.html',todo_lists=lsts) # should have a place for flashed messages
@@ -124,7 +127,7 @@ def all_lists():
 # When you click on the delete button for each list, that list should get deleted -- this is also addressed in a later TODO.
 
 
-@app.route('/list/<ident>')
+@app.route('/list/<ident>',methods=["GET","POST"])
 def one_list(ident):
     lst = TodoList.query.filter_by(id=ident).first()
     items = lst.items
@@ -133,7 +136,7 @@ def one_list(ident):
 
 
 # TODO 364: Complete route to update an individual ToDo item's priority
-@app.route('/update/<item>')
+@app.route('/update/<item>',methods=["GET","POST"])
 def update(item):
     pass
     # Replace with code
@@ -144,7 +147,7 @@ def update(item):
 # TODO 364: Fill in the update_item.html template to work properly with this update route. (HINT: Compare against example!)
 
 # TODO 364: Complete route to delete a whole ToDoList
-@app.route('/delete/<lst>')
+@app.route('/delete/<lst>',methods=["GET","POST"])
 def delete(lst):
     pass # Replace with code
     # This code should successfully delete the appropriate todolist
