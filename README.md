@@ -2,7 +2,7 @@
 
 ### DEADLINE: April 4, 2018 at 11:59 pm
 
-**You should read all of the below before beginning to ensure you set yourself up well and submit the assignment correctly.**
+**You should read all of the below before beginning to ensure you set yourself up well and submit the assignment correctly.** This assignment may only be submitted *2 days* late in order to ensure you get it back in a timely fashion.
 
 ## Overview
 
@@ -15,6 +15,8 @@ Each `TODO` listed for you is intended to be a small-to-medium size task. In gen
 Your overall objective is to complete building an application to build TODO lists, with individual items on them. You should be able to update individual list *items'* priority values, and you should be able to delete any TODO list that is saved in the app.
 
 Examining the code and instructions will give you further specifics.
+
+Finally, you have an additional TODO for this assignment: practicing the git branching skill we have practiced in class. There are directions below within the **Instructions** section of this README explaining specifically what to do.
 
 Here is a series of screenshots displaying what you should be able to do in the completed application:
 
@@ -39,18 +41,19 @@ You will be:
 * Practicing a skill with git, useful for collaborating and dealing with others' Flask and other types of web applications
 
 
-## Instructions
+## Specific Instructions
 
 * First, check out the **to submit** instructions so you know how to begin work on this!
 * Check out `app.py`, scan through it, read the comments, and complete the `TODO 364` todo items one by one.
 * Try to understand all the code. What does this application do? What is missing from it? What is already there? What does this code do? Doing this will be enormously helpful to finishing this assignment more easily.
-* Identify anything in the `TODO` comments you are confused about so you can ask questions ASAP.
+* Identify anything in the `TODO 364` comments you are confused about so you can ask questions ASAP.
 * Consider what example(s) are similar to the tasks at hand -- if you look at the right examples and make analogies to them, this will be much easier to do!
 * Make sure to debug along the way!
-* Then ensure you have everything committed properly and pushed to your new GitHub repo to submit the link properly to Canvas.
-* Make some additional change(s) to your application
-* Create and check-out a new branch called `addl_feature` and commit additional changes to this `addl_feature` branch (these changes can be ANYTHING, working or not, but they must be changes to at least one file)
-* Push the `addl_feature` branch to your GitHub repository, so at the end, your GitHub repository representing this project has two branches: `master` and `addl_feature` (worth **150 points** from this HW; the rest of the points come from the TODOs)
+* Edit the files to ensure you have completed each `TODO 364` item. Each is worth points, and **the total of all `TODO 364` items completed are worth 850 points.**
+* Ensure you have everything committed properly and pushed to your new GitHub repo to submit the link properly to Canvas.
+* Make some additional change(s) to your application -- ANYTHING that is a change to at least one file.
+* Create and check-out a new branch called `addl_feature` and commit the additional changes you have made to this `addl_feature` branch (these changes can be ANYTHING, working or not, but they must be changes to at least one file).
+* Push the `addl_feature` branch to your GitHub repository, so at the end, your GitHub repository representing this project has two branches: `master` and `addl_feature` (**completing this branching and pushing step is worth **150 points from this HW**; the rest of the points come from the `TODO 364`s)
 
 ## To submit (read ALL the below before beginning)
 
