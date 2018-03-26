@@ -53,7 +53,7 @@ You will be:
 * Ensure you have everything committed properly and pushed to your new GitHub repo to submit the link properly to Canvas.
 * Make some additional change(s) to your application -- ANYTHING that is a change to at least one file.
 * Create and check-out a new branch called `addl_feature` and commit the additional changes you have made to this `addl_feature` branch (these changes can be ANYTHING, working or not, but they must be changes to at least one file).
-* Push the `addl_feature` branch to your GitHub repository, so at the end, your GitHub repository representing this project has two branches: `master` and `addl_feature` (**completing this branching and pushing step is worth **150 points from this HW**; the rest of the points come from the `TODO 364`s)
+* Push the `addl_feature` branch to your GitHub repository, so at the end, your GitHub repository representing this project has two branches: `master` and `addl_feature` (**completing this branching and pushing step is worth 150 points from this HW**; the rest of the points come from the `TODO 364`s)
 
 ## To submit (read ALL the below before beginning)
 
