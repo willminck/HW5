@@ -144,6 +144,7 @@ def update(item):
     # Replace with code
     # This code should use the form you created above for updating the specific item and manage the process of updating the item's priority.
     # Once it is updated, it should redirect to the page showing all the links to todo lists.
+    # It should flash a message: Updated priority of <the description of that item>
     # HINT: What previous example is extremely similar?
     form = UpdateInfoForm()
     if form.validate_on_submit():
@@ -167,9 +168,9 @@ def delete(lst):
     return redirect(url_for('all_lists'))
     #pass # Replace with code
     # This code should successfully delete the appropriate todolist
-    # Should flash a message about what was deleted
-    # And redirect the user to the page showing all the todo lists
-    # HINT: Compare against what you've done for updating and class notes -- the goal here is very similar, and in some ways simpler!
+    # Should flash a message about what was deleted, e.g. Deleted list <title of list>
+    # And should redirect the user to the page showing all the todo lists
+    # HINT: Compare against what you've done for updating and class notes -- the goal here is very similar, and in some ways simpler.
 
 if __name__ == "__main__":
     db.create_all()
