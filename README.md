@@ -54,9 +54,8 @@ You will be:
 * Identify anything in the `TODO 364` comments you are confused about so you can ask questions ASAP.
 * Consider what example(s) are similar to the tasks at hand -- if you look at the right examples and make analogies to them, this will be much easier to do!
 * Make sure to debug along the way!
-* Edit the files to ensure you have completed each `TODO 364` item. Each is worth points, and **the total of all `TODO 364` items completed are worth 850 points.**
+* Edit the files to ensure you have completed each `TODO 364` item. Each is worth points.
 * Ensure you have everything committed properly and pushed to your new GitHub repo to submit the link properly to Canvas.
-* Make some additional change(s) to your application -- ANYTHING that is a change to at least one file.
 
 ## To submit (read ALL the below before beginning)
 
